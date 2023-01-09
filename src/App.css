@@ -1,31 +1,107 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee+Shade&family=Oxygen:wght@300;400;700&family=Passion+One:wght@700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: rgb(252, 252, 253);
+  padding: 0.7rem 2.2rem 0.7rem 2.2rem;
+  margin: 0;
+  justify-content: space-between;
+  display: flex;
+  box-shadow:
+    0 1px 2px 0 rgb(0 0 0 / 3%),
+    0 1px 6px -1px rgb(0 0 0 / 2%),
+    0 2px 4px 0 rgb(0 0 0 / 2%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-logo {
+  font-family: 'Passion One', cursive;
+  font-size: 1.7rem;
+  color: #0d67fe;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.nav-item {
+  padding: 3px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  color: #1b0766;
+}
+
+.nav-price-text {
+  font-size: 0.6rem;
+  padding: 2px;
+  color: #0d67fe;
+}
+
+.price {
+  display: inline-block;
+  font-weight: 500;
+  color: #3d2b7c;
+  margin: auto;
+}
+
+.loading-banner:after {
+  position: absolute;
+  margin-left: .2rem;
+  content: ' ...';
+  animation: loading steps(4) 2s infinite;
+  clip: rect(auto, 0px, auto, auto);
+}
+
+@keyframes loading {
+  to {
+    clip: rect(auto, 20px, auto, auto);
+}
+  
+}
+.connect-nav {
+  border: 2px solid #1b0766;
+  background: #0d67fe;
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.main-container {
+  min-height: 85vh;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
 }
 
-.App-link {
-  color: #61dafb;
+.swap-wrapper {
+  z-index: -9999999999999999999999999999999;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +112,117 @@
     transform: rotate(360deg);
   }
 }
+.landing-header {
+  color: #1b0766;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 7rem;
+  text-align: center;
+}
+
+.upap-text {
+  color: #0d67fe;
+}
+
+.chart-body {
+  display: flex;
+  width: 100%;
+  padding: 3rem;
+}
+
+.chart-header {
+  text-align: center;
+  color: #3d2b7c;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.chart {
+  background-color: aliceblue;
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  padding: 2px;
+  border: 1px solid #3d2b7c2b;
+
+}
+
+.chart-desc {
+  font-family: 'Audiowide', cursive;
+  padding: 2rem;
+  color: #42d689;
+}
+
+.menu-icon {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .menu-icon {
+    display: block;
+    height: fit-content;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    display: none;
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .list {
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    left: 3rem;
+    padding-left: 5px;
+  }
+
+  .nav-items:nth-child(1) {
+    border-top: 1px solid rgba(18, 59, 205, 0.058);
+    margin-top: 50px;
+    text-align: right;
+  }
+
+  .mobile-connect-nav {
+    margin: 0;
+    border: 2px solid #1b0766;
+    background: #0d67fe;
+    color: #ffffff;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .mobile-button-wrapper {
+    margin: 0;
+  }
+
+        .mobile-button {
+          background: #0d67fe;
+          color: #ffffff;
+          padding: 15px;
+        }
+    
+        .nav-items {
+          width: 100%;
+          border-top: 1px solid rgba(255, 255, 255, 0.555);
+          text-align: right;
+          margin-right: 0px;
+          padding: 20px 0;
+          color: #1b0766;
+        }
+        }
